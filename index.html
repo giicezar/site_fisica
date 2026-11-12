@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Raios Alfa, Beta e Gama</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Fredoka:wght@300..700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <nav>
+    <a href="#historia">História</a>
+    <a href="#radiacoes">Radiações</a>
+    <a href="#tecnologia">Tecnologia</a>
+    <a href="#saude">Saúde</a>
+  </nav>
+
+  <header>
+    <div>
+      <h1><span class="alfa">Alfa</span>, <span class="beta">Beta</span> e <span class="gama">Gama</span></h1>
+      <p>Três tipos de radiação emitidos por núcleos instáveis. Cada uma tem carga, massa e poder de penetração
+        diferentes, e usos que vão da indústria à medicina.</p>
+    </div>
+    <img class="atomo" src="img/atomo.png" alt="Ilustração de um átomo com núcleo e órbitas">
+  </header>
+
+  <section id="historia">
+    <h2>História da radiação</h2>
+    <p class="lead">Do acaso de 1895 à descrição das emissões radioativas.</p>
+
+    <div class="linha">
+      <div class="evento">
+        <time>1895</time>
+        <div class="card">
+          <div class="foto duplo"><img src="img/rontgen.jpg" alt="Wilhelm Röntgen"><img src="img/becquerel.jpg"
+              alt="Henri Becquerel"></div>
+          <h3>Röntgen e Becquerel</h3>
+          <p>Wilhelm K. Röntgen descobre os Raios X. Becquerel estuda substâncias fosforescentes e fluorescentes.</p>
+        </div>
+      </div>
+      <div class="evento">
+        <time>Casal Curie</time>
+        <div class="card">
+          <div class="foto"><img src="img/curie.jpg" alt="Pierre e Marie Curie no laboratório"></div>
+          <h3>Rádio e Polônio</h3>
+          <p>Marie Curie e Pierre Curie aprofundam os trabalhos e descobrem o Rádio (Ra) e o Polônio (Po).</p>
+        </div>
+      </div>
+      <div class="evento">
+        <time>1908</time>
+        <div class="card">
+          <div class="foto"><img src="img/rutherford.jpg" alt="Ernest Rutherford"></div>
+          <h3>Ernest Rutherford</h3>
+          <p>Descreve a natureza das emissões radioativas (Alfa, Beta e Gama) e ganha o Prêmio Nobel de Química em 1908.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="radiacoes">
+    <h2>Introdução e características das radiações</h2>
+    <p class="lead">Compare as três emissões e veja, no simulador, o que cada barreira consegue bloquear.</p>
+
+    <div class="grid">
+      <div class="card">
+        <span class="simbolo">α</span>
+        <h3>Raios Alfa</h3>
+        <ul>
+          <li>Partículas formadas por dois prótons e dois nêutrons.</li>
+          <li>Carga positiva (+2).</li>
+          <li>Baixo poder de penetração e alto poder de ionização.</li>
+          <li>Não apresentam frequência ou comprimento de onda eletromagnéticos próprios.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <span class="simbolo">β</span>
+        <h3>Raios Beta</h3>
+        <ul>
+          <li>Partículas que podem ser elétrons ou pósitrons.</li>
+          <li>Carga negativa ou positiva.</li>
+          <li>Penetração intermediária: são bloqueados por alumínio.</li>
+          <li>Não apresentam frequência ou comprimento de onda eletromagnéticos próprios.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <span class="simbolo">γ</span>
+        <h3>Raios Gama</h3>
+        <ul>
+          <li>Ondas eletromagnéticas de alta energia, sem massa e sem carga elétrica.</li>
+          <li>Comprimento de onda extremamente pequeno: &lt; 6 × 10<sup>−12</sup> m.</li>
+          <li>Frequência superior a 5 × 10<sup>19</sup> Hz.</li>
+          <li>Alto poder de penetração.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="simulador">
+      <h3>Simulador de penetração</h3>
+      <p>Escolha uma barreira e observe quais radiações atravessam.</p>
+      <div class="botoes" id="barreiras">
+        <button class="ativo" onclick="escolherBarreira(0, this)">Sem barreira</button>
+        <button onclick="escolherBarreira(1, this)">Folha de papel</button>
+        <button onclick="escolherBarreira(2, this)">Alumínio</button>
+        <button onclick="escolherBarreira(3, this)">Chumbo espesso</button>
+      </div>
+      <canvas id="sim" width="800" height="230"></canvas>
+      <p id="status"></p>
+    </div>
+
+    <h3 class="titulo-tabela">Comparação entre as radiações</h3>
+    <div class="tabela">
+      <table>
+        <tr>
+          <th></th>
+          <th>Alfa (α)</th>
+          <th>Beta (β)</th>
+          <th>Gama (γ)</th>
+        </tr>
+        <tr>
+          <td>Natureza</td>
+          <td>2 prótons + 2 nêutrons</td>
+          <td>Elétrons ou pósitrons</td>
+          <td>Onda eletromagnética</td>
+        </tr>
+        <tr>
+          <td>Carga</td>
+          <td>+2</td>
+          <td>Negativa ou positiva</td>
+          <td>Nenhuma</td>
+        </tr>
+        <tr>
+          <td>Penetração</td>
+          <td>Baixa<div class="barra"><i style="width: 20%; background: #a35cff"></i></div>
+          </td>
+          <td>Intermediária (bloqueada por alumínio)<div class="barra"><i style="width: 55%; background: #a35cff"></i>
+            </div>
+          </td>
+          <td>Alta<div class="barra"><i style="width: 95%; background: #a35cff"></i></div>
+          </td>
+        </tr>
+        <tr>
+          <td>Ionização</td>
+          <td>Alta</td>
+          <td>Intermediária</td>
+          <td>Baixa</td>
+        </tr>
+        <tr>
+          <td>Onda eletromagnética própria</td>
+          <td>Não</td>
+          <td>Não</td>
+          <td>Sim:<br>λ &lt; 6 × 10<sup>−12</sup> m<br>f &gt; 5 × 10<sup>19</sup> Hz</td>
+        </tr>
+      </table>
+    </div>
+  </section>
+
+  <section id="tecnologia">
+    <h2>Aplicações tecnológicas</h2>
+    <p class="lead">Da fábrica à usina, as radiações são ferramentas de medição, conservação e energia.</p>
+
+    <div class="grid">
+      <div class="card app">
+        <h3>Controle de qualidade</h3>
+        <p>Na fabricação de peças diversas, em múltiplas áreas da indústria.</p>
+      </div>
+      <div class="card app">
+        <h3>Conservação de alimentos</h3>
+        <p>Uso da radiação para preservar alimentos.</p>
+      </div>
+      <div class="card app">
+        <h3>Datação de objetos antigos</h3>
+        <p>Estimativa da idade de objetos antigos.</p>
+      </div>
+      <div class="card app">
+        <h3>Energia elétrica</h3>
+        <p>Geração em usinas nucleares.</p>
+      </div>
+      <div class="card app">
+        <h3>Pesquisa</h3>
+        <p>Experimentos e estudos em centros de pesquisa e universidades.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="saude">
+    <h2>Aplicações na saúde e na medicina</h2>
+    
+
+    <div class="grid">
+      <div class="card">
+        <h3><a href="https://www.gov.br/inca/pt-br/assuntos/cancer/tratamento/radioterapia" target="_blank"
+            rel="noopener">Radioterapia</a></h3>
+        <p>Tratamentos de radioterapia.</p>
+      </div>
+      <div class="card">
+        <h3><a href="https://vencerocancer.org.br/cancer/radiografia/" target="_blank" rel="noopener">Radiografia</a>
+        </h3>
+        <p>Diagnóstico médico por imagem.</p>
+      </div>
+      <div class="card">
+        <h3><a href="https://www.rededorsaoluiz.com.br/exames-e-procedimentos/mamografia" target="_blank"
+            rel="noopener">Mamografia</a></h3>
+        <p>Diagnóstico médico por imagem.</p>
+      </div>
+      <div class="card">
+        <h3><a href="https://diagmed.com.br/para-que-serve-a-tomografia-entenda-quando-o-exame-e-indicado/"
+            target="_blank" rel="noopener">Tomografia</a></h3>
+        <p>Diagnóstico médico por imagem.</p>
+      </div>
+      <div class="card">
+        <h3><a href="https://cmscientifica.com.br/o-que-e-a-esterilizacao-por-raios-gama/" target="_blank"
+            rel="noopener">Esterilização de materiais</a></h3>
+        <p>Geralmente aplicada a materiais cirúrgicos.</p>
+      </div>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
