@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Raios Alfa, Beta e Gama — Física Nuclear</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Fredoka:wght@300..700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <nav>
+    <a href="#historia">História</a>
+    <a href="#radiacoes">Radiações</a>
+    <a href="#simulador-sec">Simulador</a>
+    <a href="#tecnologia">Tecnologia</a>
+    <a href="#saude">Saúde</a>
+    <a href="#protecao">Radioproteção</a>
+  </nav>
+
+  <header>
+    <div>
+      <h1><span class="alfa">Alfa</span>, <span class="beta">Beta</span> e <span class="gama">Gama</span></h1>
+      <p>Três tipos principais de radiação ionizante emitidos por núcleos atômicos instáveis em busca de estabilidade. Cada uma possui massa, carga elétrica e poder de penetração distintos, com aplicações fundamentais na medicina, indústria e pesquisa científica.</p>
+    </div>
+    <img class="atomo" src="img/atomo.svg" alt="Ilustração de um átomo com núcleo e órbitas">
+  </header>
+
+  <section id="historia">
+    <h2>História da radiação</h2>
+    <p class="lead">A descoberta da radioatividade no final do século XIX revolucionou a Física e provou que o átomo não era uma esfera maciça e indivisível.</p>
+
+    <div class="linha">
+      <div class="evento">
+        <time>1895 – 1896</time>
+        <div class="card">
+          <div class="foto duplo">
+            <img src="img/rontgen.jpg" alt="Wilhelm Röntgen">
+            <img src="img/becquerel.jpg" alt="Henri Becquerel">
+          </div>
+          <div class="info">
+            <h3>Röntgen e Becquerel</h3>
+            <p>Em 1895, Wilhelm Röntgen descobre os <strong>Raios X</strong> ao estudar tubos de raios catódicos. Meses depois, em 1896, Henri Becquerel observa que sais de urânio velavam chapas fotográficas mesmo no escuro, descobrindo a emissão espontânea de radiação.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="evento">
+        <time>1898 – 1911</time>
+        <div class="card">
+          <div class="foto">
+            <img src="img/curie.jpg" alt="Pierre e Marie Curie no laboratório">
+          </div>
+          <div class="info">
+            <h3>Casal Curie: Rádio e Polônio</h3>
+            <p>Marie e Pierre Curie investigam a pechblenda, cunham o termo <strong>"radioatividade"</strong> e isolam dois novos elementos muito mais radioativos que o urânio: o Polônio (Po) e o Rádio (Ra). Marie Curie tornou-se a primeira pessoa a ganhar dois Prêmios Nobel (Física em 1903 e Química em 1911).</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="evento">
+        <time>1899 – 1908</time>
+        <div class="card">
+          <div class="foto">
+            <img src="img/rutherford.jpg" alt="Ernest Rutherford">
+          </div>
+          <div class="info">
+            <h3>Ernest Rutherford</h3>
+            <p>Ao submeter as emissões radioativas a campos magnéticos e barreiras físicas, Rutherford identifica e nomeia as radiações <strong>Alfa (α)</strong> e <strong>Beta (β)</strong> (e posteriormente a <strong>Gama (γ)</strong>, descoberta por Paul Villard), recebendo o Prêmio Nobel de Química em 1908.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="radiacoes">
+    <h2>Introdução e características das radiações</h2>
+    <p class="lead">Quando um núcleo atômico tem excesso de prótons, nêutrons ou energia, ele sofre <strong>decaimento radioativo</strong>, liberando partículas ou ondas eletromagnéticas.</p>
+
+    <div class="grid">
+      <div class="card">
+        <span class="simbolo alfa">α</span>
+        <h3>Raios Alfa</h3>
+        <ul>
+          <li><strong>Composição:</strong> Partículas pesadas formadas por 2 prótons e 2 nêutrons (idênticas ao núcleo de um átomo de Hélio-4).</li>
+          <li><strong>Carga elétrica:</strong> Positiva (+2).</li>
+          <li><strong>Decaimento:</strong> O núcleo emissor perde 2 prótons (Z − 2) e 4 unidades de massa (A − 4), transformando-se em outro elemento.</li>
+          <li><strong>Interação:</strong> Por serem grandes e lentas, colidem facilmente com átomos do ar, tendo <strong>alto poder de ionização</strong> e <strong>baixo poder de penetração</strong>.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <span class="simbolo beta">β</span>
+        <h3>Raios Beta</h3>
+        <ul>
+          <li><strong>Composição:</strong> Partículas muito leves e velozes, podendo ser elétrons (β⁻) ou pósitrons (β⁺) ejetados do núcleo.</li>
+          <li><strong>Carga elétrica:</strong> Negativa (−1) ou positiva (+1).</li>
+          <li><strong>Decaimento:</strong> Na emissão β⁻, um nêutron converte-se em um próton (Z + 1), mantendo a massa atômica praticamente igual.</li>
+          <li><strong>Interação:</strong> Penetração intermediária (atravessam papel e pele superficial, mas são barradas por uma chapa fina de alumínio).</li>
+        </ul>
+      </div>
+      <div class="card">
+        <span class="simbolo gama">γ</span>
+        <h3>Raios Gama</h3>
+        <ul>
+          <li><strong>Composição:</strong> Ondas eletromagnéticas de altíssima energia (fótons), sem massa e sem carga elétrica.</li>
+          <li><strong>Espectro:</strong> Comprimento de onda extremamente curto (&lt; 6 × 10<sup>−12</sup> m) e frequência altíssima (&gt; 5 × 10<sup>19</sup> Hz).</li>
+          <li><strong>Decaimento:</strong> Ocorre geralmente após emissões α ou β, quando o núcleo ainda está excitado e libera o excesso de energia sem mudar Z ou A.</li>
+          <li><strong>Interação:</strong> <strong>Altíssimo poder de penetração</strong> e baixo poder de ionização direta.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="simulador" id="simulador-sec">
+      <h3>Simulador de alcance dos raios</h3>
+      <p>Selecione diferentes barreiras físicas abaixo para observar como a massa e a carga de cada radiação influenciam sua capacidade de atravessar materiais:</p>
+      <div class="botoes" id="barreiras">
+        <button class="ativo" onclick="escolherBarreira(0, this)">Sem barreira</button>
+        <button onclick="escolherBarreira(1, this)">Folha de papel</button>
+        <button onclick="escolherBarreira(2, this)">Chapa de alumínio</button>
+        <button onclick="escolherBarreira(3, this)">Bloco de chumbo</button>
+      </div>
+      <canvas id="sim" width="800" height="230"></canvas>
+      <p id="status"></p>
+    </div>
+
+    <h3 class="titulo-tabela">Comparação resumida entre as radiações</h3>
+    <div class="tabela">
+      <table>
+        <tr>
+          <th>Propriedade</th>
+          <th>Alfa (α)</th>
+          <th>Beta (β)</th>
+          <th>Gama (γ)</th>
+        </tr>
+        <tr>
+          <td>Natureza física</td>
+          <td>Partícula (2 prótons + 2 nêutrons)</td>
+          <td>Partícula (elétron ou pósitron)</td>
+          <td>Onda eletromagnética (fóton)</td>
+        </tr>
+        <tr>
+          <td>Carga elétrica</td>
+          <td>+2</td>
+          <td>−1 (β⁻) ou +1 (β⁺)</td>
+          <td>0 (Neutra)</td>
+        </tr>
+        <tr>
+          <td>Velocidade aproximada</td>
+          <td>~5% a 7% da velocidade da luz</td>
+          <td>Até ~90% da velocidade da luz</td>
+          <td>100% da velocidade da luz (300.000 km/s)</td>
+        </tr>
+        <tr>
+          <td>Capacidade de atravessar materiais</td>
+          <td>Baixo (barrada por papel ou pele)
+            <div class="barra"><i style="width: 18%; background: #ff4fd8"></i></div>
+          </td>
+          <td>Intermediário (barrada por alumínio)
+            <div class="barra"><i style="width: 55%; background: #a35cff"></i></div>
+          </td>
+          <td>Alto (atenuada por chumbo ou concreto espesso)
+            <div class="barra"><i style="width: 95%; background: #3ea6ff"></i></div>
+          </td>
+        </tr>
+        <tr>
+          <td>Poder de ionização</td>
+          <td>Alto (arranca muitos elétrons no caminho)</td>
+          <td>Intermediário</td>
+          <td>Baixo (interage pouco com átomos individuais)</td>
+        </tr>
+        <tr>
+          <td>Onda eletromagnética própria</td>
+          <td>Não (é matéria)</td>
+          <td>Não (é matéria)</td>
+          <td>Sim: λ &lt; 6 × 10<sup>−12</sup> m | f &gt; 5 × 10<sup>19</sup> Hz</td>
+        </tr>
+      </table>
+    </div>
+  </section>
+
+  <section id="tecnologia">
+    <h2>Aplicações tecnológicas e industriais</h2>
+    <p class="lead">Controladas com precisão, as radiações oferecem soluções eficientes para indústria, arqueologia, agricultura e geração de energia.</p>
+
+    <div class="grid">
+      <div class="card app">
+        <h3>Controle de qualidade (Gamagrafia)</h3>
+        <p>Raios gama são usados para "radiografar" peças metálicas e soldas em aviões, navios e gasodutos, detectando rachaduras internas sem precisar destruir ou desmontar o material.</p>
+      </div>
+      <div class="card app">
+        <h3>Conservação de alimentos</h3>
+        <p>A irradiação com raios gama elimina fungos, bactérias e parasitas e impede o brotamento de batatas e cebolas. O alimento <strong>não se torna radioativo</strong> e dura muito mais tempo.</p>
+      </div>
+      <div class="card app">
+        <h3>Datação por Carbono-14</h3>
+        <p>Medindo o decaimento beta do isótopo radioativo Carbono-14 presente em restos orgânicos, cientistas determinam a idade de fósseis, múmias e artefatos de até 50 mil anos.</p>
+      </div>
+      <div class="card app">
+        <h3>Geração de energia elétrica</h3>
+        <p>Em usinas termonucleares, a fissão controlada de átomos como o Urânio-235 libera imensa quantidade de calor, usado para ferver água, gerar vapor e movimentar turbinas elétricas.</p>
+      </div>
+      <div class="card app">
+        <h3>Detectores de fumaça</h3>
+        <p>Muitos detectores residenciais usam uma quantidade mínima de Amerício-241 (emissor alfa) para ionizar o ar interno; quando a fumaça entra e interrompe essa corrente, o alarme dispara.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="saude">
+    <h2>Aplicações na saúde e na medicina</h2>
+    <p class="lead">Na medicina nuclear e na radiologia, a radiação permite enxergar o interior do corpo humano e destruir células tumorais com alta precisão.</p>
+
+    <div class="grid">
+      <div class="card">
+        <h3><a href="https://www.gov.br/inca/pt-br/assuntos/cancer/tratamento/radioterapia" target="_blank"
+            rel="noopener">Radioterapia</a></h3>
+        <p>Utiliza feixes focalizados de radiação ionizante (como raios gama do Cobalto-60 ou aceleradores lineares) para danificar o DNA de células cancerígenas e impedir sua multiplicação.</p>
+      </div>
+      <div class="card">
+        <h3><a href="https://vencerocancer.org.br/cancer/radiografia/" target="_blank" rel="noopener">Radiografia (Raio-X)</a>
+        </h3>
+        <p>Exame rápido de diagnóstico por imagem em que tecidos densos (como ossos) absorvem mais radiação que tecidos moles, permitindo identificar fraturas e infecções pulmonares.</p>
+      </div>
+      <div class="card">
+        <h3><a href="https://www.rededorsaoluiz.com.br/exames-e-procedimentos/mamografia" target="_blank"
+            rel="noopener">Mamografia</a></h3>
+        <p>Tipo específico de radiografia de baixa dose voltada para o tecido mamário, fundamental para o rastreamento e detecção precoce do câncer de mama.</p>
+      </div>
+      <div class="card">
+        <h3><a href="https://diagmed.com.br/para-que-serve-a-tomografia-entenda-quando-o-exame-e-indicado/"
+            target="_blank" rel="noopener">Tomografia Computadorizada</a></h3>
+        <p>Combina múltiplos feixes de raios X girando em torno do paciente com processamento computacional para criar imagens detalhadas em fatias (3D) de órgãos, vasos e ossos.</p>
+      </div>
+      <div class="card">
+        <h3><a href="https://cmscientifica.com.br/o-que-e-a-esterilizacao-por-raios-gama/" target="_blank"
+            rel="noopener">Esterilização de materiais</a></h3>
+        <p>Seringas, luvas, bisturis e próteses são esterilizados já dentro de suas embalagens lacradas usando raios gama, garantindo ausência total de microrganismos sem uso de calor.</p>
+      </div>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
